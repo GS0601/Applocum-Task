@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="card product-card mb-4 shadow-sm">
+      <div class="card-header">
+        <h5 class="text-center">Product Item</h5>
+      </div>     
+      <div class="card-body">
+        <p class="card-text"> 
+          <strong>
+           Name : {{ productItem.name}}
+          </strong>
+        </p>
+          <p class="card-text">
+              <strong>
+                   {{ productItem.price | currency:'INR'}}
+              </strong>
+  
+          </p>
+        <p class="card-text"> 
+          <strong>
+           Location : {{ productItem.location}}
+          </strong>
+        </p>
+        <p class="card-text"> 
+          <strong>
+           qty : {{ productItem.qty}}
+          </strong>
+        </p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <button 
+            type="button" 
+            class="btn btn-sm btn-primary product-btn text-center" (click)="handleAddToCart()">Add to cart</button>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+</div>

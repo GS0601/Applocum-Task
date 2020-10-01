@@ -1,0 +1,116 @@
+<section class="p-3 mb-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 m-auto">
+                <div *ngIf="isSubmitted" class="alert alert-success animated jello">
+                    <button class="close" data-dismiss="alert">
+                      <i class="fa fa-times-circle"></i>
+                    </button>
+                    {{successMsg?.success | json}}
+                  </div>
+                  <div *ngIf="!isSubmitted && isEmptyForm" class="alert alert-danger animated zoomIn">
+                    <button class="close" data-dismiss="alert">
+                      <i class="fa fa-times-circle"></i>
+                    </button>
+                    <span>Please Fill in the Details</span>
+                  </div>
+                <div class="card animated slideInRight  mb-5" *ngIf="!isSubmitted">
+                    <div class="card-header bg-secondary text-white text-center">
+                        <h3>Sign Up Here</h3>
+                    </div>
+                    <div class="card-body bg-light">
+                        <form (ngSubmit)="submitRegister()">
+
+                            <div class="form-group">
+                                <input
+                                  formControlName="email"
+                                  type="email"
+                                  class="form-control"
+                                  [class.is-form-invalid]="getEmail().invalid && getEmail().touched"
+                                  [class.is-form-valid]="getEmail().valid && getEmail().touched"
+                                  placeholder="Email">
+                                <div *ngIf="getEmail().invalid && getEmail().touched">
+                                  <small *ngIf="getEmail().errors.required && getEmail().invalid && getEmail().touched" class="text-danger">Required Email</small>
+                                  <small *ngIf="getEmail().errors.email && getEmail().invalid && getEmail().touched" class="text-danger">Please enter a proper email</small>
+                                </div>
+                                <small *ngIf="getEmail().valid && getEmail().touched" class="text-success">Looks Good</small>
+                              </div>
+                              <div class="form-group">
+                                <input
+                                  formControlName="password"
+                                  type="password"
+                                  class="form-control"
+                                  [class.is-form-invalid]="getPassword().invalid && getPassword().touched"
+                                  [class.is-form-valid]="getPassword().valid && getPassword().touched"
+                                  placeholder="Password">
+                                <div *ngIf="getPassword().invalid && getPassword().touched">
+                                  <small *ngIf="getPassword().errors.required && getPassword().invalid && getPassword().touched" class="text-danger">Required Password</small>
+                                  <small *ngIf="getPassword().errors.minlength && getPassword().invalid && getPassword().touched" class="text-danger">Min 5 letters Required</small>
+                                </div>
+                                <small *ngIf="getPassword().valid && getPassword().touched" class="text-success">Looks Good</small>
+                              </div>
+                              <div class="form-group">
+                                <input
+                                  formControlName="firstname"
+                                  type="text"
+                                  class="form-control"
+                                  [class.is-form-invalid]="getFirstName().invalid && getFirstName().touched"
+                                  [class.is-form-valid]="getFirstName().valid && getFirstName().touched"
+                                  placeholder="First Name">
+                                <div *ngIf="getFirstName().invalid && getFirstName().touched">
+                                  <small *ngIf="getFirstName().errors.required && getFirstName().invalid && getFirstName().touched" class="text-danger">Required Username</small>
+                                  <small *ngIf="getFirstName().errors.minlength && getFirstName().invalid && getFirstName().touched" class="text-danger">Min 5 letters Required</small>
+                                </div>
+                                <small *ngIf="getFirstName().valid && getFirstName().touched" class="text-success">Looks Good</small>
+                              </div>
+                              <div class="form-group">
+                                <input
+                                  formControlName="lastname"
+                                  type="text"
+                                  class="form-control"
+                                  [class.is-form-invalid]="getLastName().invalid && getLastName().touched"
+                                  [class.is-form-valid]="getLastName().valid && getLastName().touched"
+                                  placeholder="Last Name">
+                                <div *ngIf="getLastName().invalid && getLastName().touched">
+                                  <small *ngIf="getLastName().errors.required && getLastName().invalid && getLastName().touched" class="text-danger">Required Username</small>
+                                  <small *ngIf="getLastName().errors.minlength && getLastName().invalid && getLastName().touched" class="text-danger">Min 5 letters Required</small>
+                                </div>
+                                <small *ngIf="getLastName().valid && getLastName().touched" class="text-success">Looks Good</small>
+                              </div>
+                            <div class="form-group">
+                                <input [(ngModel)]="user.mobile" name="mobile" type="tel" class="form-control" placeholder="Your Mobile Number">
+                            </div>
+                            <div class="form-group">
+                                <input [(ngModel)]="user.role" name="role" type="text" class="form-control" placeholder="Your role">
+                            </div>
+                            <div class="form-group">
+                                <select [(ngModel)]="user.gender" name="gender" class="form-control">
+                                    <option value="">Select Gender</option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                  </select>
+                            </div>
+                            <div class="form-group">
+                                <input [(ngModel)]="user.dob" name="Username" type="date" class="form-control" placeholder="Your Date of birth"> 
+                            </div>
+                            <div class="form-group">
+                                 <select [(ngModel)]="user.deviceType"  class="form-control" name="deviceType" id="">
+                                   <option value="">Select Device Type</option>
+                                    <option>Web</option>
+                                    <option>Ios</option>
+                                    <option>Andriod</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input [(ngModel)]="user.player" name="player" type="text" class="form-control" placeholder="Your Player Id">
+                            </div>
+                            <div>
+                                <input type="submit" value="SignUp" class="btn btn-secondary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
