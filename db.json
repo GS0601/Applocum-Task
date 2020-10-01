@@ -1,0 +1,218 @@
+{
+  "products": [
+    {
+      "name": "Cheese",
+      "price": 2.5,
+      "location": "Refrigerated foods",
+      "qty": 2
+    },
+    {
+      "name": "Crisps",
+      "price": 3,
+      "location": "the Snack isle",
+      "qty": 5
+    },
+    {
+      "name": "pizza",
+      "price": 4,
+      "location": "Refrigerated foods",
+      "qty": 7
+    },
+    {
+      "name": "Chocolate",
+      "price": 1.5,
+      "location": "the Snack isle",
+      "qty": 8
+    },
+    {
+      "name": "Self-raising flour",
+      "price": 1.5,
+      "location": "Home baking",
+      "qty": 0
+    },
+    {
+      "name": "Ground almonds",
+      "price": 3,
+      "location": "Home baking",
+      "qty": 1
+    }
+  ],
+  "carts": [
+    {
+      "product": {
+        "name": "pizza",
+        "price": 4,
+        "location": "Refrigerated foods",
+        "qty": 7
+      },
+      "id": 1
+    },
+    {
+      "product": {
+        "name": "pizza",
+        "price": 4,
+        "location": "Refrigerated foods",
+        "qty": 7
+      },
+      "id": 2
+    },
+    {
+      "product": {
+        "name": "pizza",
+        "price": 4,
+        "location": "Refrigerated foods",
+        "qty": 7
+      },
+      "id": 3
+    },
+    {
+      "product": {
+        "name": "Cheese",
+        "price": 2.5,
+        "location": "Refrigerated foods",
+        "qty": 2
+      },
+      "id": 4
+    },
+    {
+      "product": {
+        "name": "Crisps",
+        "price": 3,
+        "location": "the Snack isle",
+        "qty": 5
+      },
+      "id": 5
+    },
+    {
+      "product": {
+        "name": "pizza",
+        "price": 4,
+        "location": "Refrigerated foods",
+        "qty": 7
+      },
+      "id": 6
+    },
+    {
+      "product": {
+        "name": "Crisps",
+        "price": 3,
+        "location": "the Snack isle",
+        "qty": 5
+      },
+      "id": 7
+    },
+    {
+      "product": {
+        "name": "Cheese",
+        "price": 2.5,
+        "location": "Refrigerated foods",
+        "qty": 2
+      },
+      "id": 8
+    },
+    {
+      "product": {
+        "name": "Cheese",
+        "price": 2.5,
+        "location": "Refrigerated foods",
+        "qty": 2
+      },
+      "id": 9
+    },
+    {
+      "product": {
+        "name": "pizza",
+        "price": 4,
+        "location": "Refrigerated foods",
+        "qty": 7
+      },
+      "id": 10
+    },
+    {
+      "product": {
+        "name": "pizza",
+        "price": 4,
+        "location": "Refrigerated foods",
+        "qty": 7
+      },
+      "id": 11
+    },
+    {
+      "product": {
+        "name": "Crisps",
+        "price": 3,
+        "location": "the Snack isle",
+        "qty": 5
+      },
+      "id": 12
+    },
+    {
+      "product": {
+        "name": "Crisps",
+        "price": 3,
+        "location": "the Snack isle",
+        "qty": 5
+      },
+      "id": 13
+    },
+    {
+      "product": {
+        "name": "pizza",
+        "price": 4,
+        "location": "Refrigerated foods",
+        "qty": 7
+      },
+      "id": 14
+    },
+    {
+      "product": {
+        "name": "pizza",
+        "price": 4,
+        "location": "Refrigerated foods",
+        "qty": 7
+      },
+      "id": 15
+    },
+    {
+      "product": {
+        "name": "Self-raising flour",
+        "price": 1.5,
+        "location": "Home baking",
+        "qty": 0
+      },
+      "id": 16
+    },
+    {
+      "product": {
+        "name": "Self-raising flour",
+        "price": 1.5,
+        "location": "Home baking",
+        "qty": 0
+      },
+      "id": 17
+    }
+  ],
+  "sign_in": [
+    {
+      "email": "ab@yopmail.com",
+      "password": "password123"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
